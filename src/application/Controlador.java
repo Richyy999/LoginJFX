@@ -16,7 +16,9 @@ import javafx.util.Duration;
 public class Controlador {
 
 	@FXML
-	private AnchorPane ancla;
+	private AnchorPane cuadroCentro;
+	@FXML
+	private AnchorPane root;
 
 	@FXML
 	private Pane panel1;
@@ -85,14 +87,25 @@ public class Controlador {
 					vuelta3.setByY(-700);
 					vuelta3.play();
 					vuelta3.setOnFinished(event3 -> {
-						RotateTransition rt = new RotateTransition(Duration.seconds(1), ancla);
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						RotateTransition rt = new RotateTransition(Duration.seconds(1), cuadroCentro);
 						rt.setByAngle(360);
 						rt.setCycleCount(1);
 						rt.play();
 						rt.setOnFinished(event4 -> {
-							Stage sala = (Stage) lblNombre.getScene().getWindow();
-							crearLogin();
-							sala.close();
+							FadeTransition ft = new FadeTransition(Duration.millis(500), root);
+							ft.setFromValue(1);
+							ft.setToValue(0);
+							ft.play();
+							ft.setOnFinished(event5 -> {
+								Stage sala = (Stage) lblNombre.getScene().getWindow();
+								crearLogin();
+								sala.close();
+							});
 						});
 					});
 				});
