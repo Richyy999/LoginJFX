@@ -88,7 +88,7 @@ public class Controlador {
 					vuelta3.play();
 					vuelta3.setOnFinished(event3 -> {
 						try {
-							Thread.sleep(200);
+							Thread.sleep(300);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
