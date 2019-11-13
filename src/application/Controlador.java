@@ -1,11 +1,15 @@
 package application;
 
+import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.JFXPasswordField;
+
 import javafx.animation.FadeTransition;
 import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -36,6 +40,14 @@ public class Controlador {
 
 	@FXML
 	private ImageView img;
+
+	@FXML
+	private Button btnLogin;
+
+	@FXML
+	private JFXTextField txtNombre;
+	@FXML
+	private JFXPasswordField txtPwd;
 
 	@FXML
 	public void cerrar() {
@@ -164,5 +176,30 @@ public class Controlador {
 				});
 			});
 		});
+	}
+
+	public void logIn() {
+		if (txtNombre.getText().equals("Ricardo") && txtPwd.getText().equals("1234")) {
+			Stage escena = (Stage) txtNombre.getScene().getWindow();
+			escena.close();
+			crearHomepage();
+		} else {
+			txtNombre.setText("");
+			txtPwd.setText("");
+		}
+	}
+
+	private void crearHomepage() {
+		Stage primaryStage = new Stage();
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
+			AnchorPane pane = (AnchorPane) loader.load();
+			Scene scene = new Scene(pane, 1150, 686);
+			primaryStage.setScene(scene);
+			primaryStage.setResizable(false);
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

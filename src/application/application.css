@@ -53,3 +53,26 @@
 	-fx-background-color: lightgreen;
 	-fx-background-radius: 80.0;
 }
+.fondoMenu{
+	-fx-background-color: green;
+}
+.animal1{
+	-fx-background-image: url('../img/ardilla.jpg');
+	-fx-background-size: 100.0%;
+	-fx-background-repeat: no-repeat;
+}
+.animal2{
+	-fx-background-image: url('../img/halcon.jpg');
+	-fx-background-size: 100.0%;
+	-fx-background-repeat: no-repeat;
+}
+.animal3{
+	-fx-background-image: url('../img/pezBetta.jpg');
+	-fx-background-size: 100.0%;
+	-fx-background-repeat: no-repeat;
+}
+.animal4{
+	-fx-background-image: url('../img/rana.jpg');
+	-fx-background-size: 100.0%;
+	-fx-background-repeat: no-repeat;
+}
