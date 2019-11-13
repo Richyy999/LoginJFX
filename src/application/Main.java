@@ -12,11 +12,11 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Splash.fxml"));
 			AnchorPane pane = (AnchorPane) loader.load();
 			Scene scene = new Scene(pane, 1150, 686);
 			primaryStage.setScene(scene);
-//			primaryStage.initStyle(StageStyle.UNDECORATED);
+			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();

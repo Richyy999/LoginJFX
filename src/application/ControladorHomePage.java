@@ -26,7 +26,7 @@ public class ControladorHomePage {
 
 	@FXML
 	private ImageView img;
-
+	
 	private boolean mostrado;
 
 	public void initialize() {
@@ -101,7 +101,6 @@ public class ControladorHomePage {
 							fadeTransition22.play();
 
 							fadeTransition22.setOnFinished(event5 -> {
-
 								animacionHome();
 							});
 						});

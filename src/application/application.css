@@ -76,3 +76,87 @@
 	-fx-background-size: 100.0%;
 	-fx-background-repeat: no-repeat;
 }
+.seccion1{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion1:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+	-fx-translate-x: -5;
+	-fx-translate-y: -5;
+}
+.seccion2{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion2:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+	-fx-translate-y: -5;
+}
+.seccion3{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion3:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+	-fx-translate-x: 5;
+	-fx-translate-y: -5;
+}
+.seccion4{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion4:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+	-fx-translate-x: -5;
+}
+.seccion5{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion5:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+}
+.seccion6{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion6:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+	-fx-translate-x: 5;
+}
+.seccion7{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion7:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+	-fx-translate-x: -5;
+	-fx-translate-y: 5;
+}
+.seccion8{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion8:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+	-fx-translate-y: 5;
+}
+.seccion9{
+	-fx-background-color: cyan;
+	-fx-text-fill: blue;
+}
+.seccion9:hover{
+	-fx-background-color: lime;
+	-fx-text-fill: green;
+	-fx-translate-x: 5;
+	-fx-translate-y: 5;
+}
