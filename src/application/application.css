@@ -85,6 +85,7 @@
 	-fx-text-fill: green;
 	-fx-translate-x: -5;
 	-fx-translate-y: -5;
+	-fx-cursor: hand;
 }
 .seccion2{
 	-fx-background-color: cyan;
@@ -94,6 +95,7 @@
 	-fx-background-color: lime;
 	-fx-text-fill: green;
 	-fx-translate-y: -5;
+	-fx-cursor: hand;
 }
 .seccion3{
 	-fx-background-color: cyan;
@@ -104,6 +106,7 @@
 	-fx-text-fill: green;
 	-fx-translate-x: 5;
 	-fx-translate-y: -5;
+	-fx-cursor: hand;
 }
 .seccion4{
 	-fx-background-color: cyan;
@@ -113,6 +116,7 @@
 	-fx-background-color: lime;
 	-fx-text-fill: green;
 	-fx-translate-x: -5;
+	-fx-cursor: hand;
 }
 .seccion5{
 	-fx-background-color: cyan;
@@ -121,6 +125,7 @@
 .seccion5:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
+	-fx-cursor: hand;
 }
 .seccion6{
 	-fx-background-color: cyan;
@@ -130,6 +135,7 @@
 	-fx-background-color: lime;
 	-fx-text-fill: green;
 	-fx-translate-x: 5;
+	-fx-cursor: hand;
 }
 .seccion7{
 	-fx-background-color: cyan;
@@ -140,6 +146,7 @@
 	-fx-text-fill: green;
 	-fx-translate-x: -5;
 	-fx-translate-y: 5;
+	-fx-cursor: hand;
 }
 .seccion8{
 	-fx-background-color: cyan;
@@ -149,6 +156,7 @@
 	-fx-background-color: lime;
 	-fx-text-fill: green;
 	-fx-translate-y: 5;
+	-fx-cursor: hand;
 }
 .seccion9{
 	-fx-background-color: cyan;
@@ -159,4 +167,8 @@
 	-fx-text-fill: green;
 	-fx-translate-x: 5;
 	-fx-translate-y: 5;
+	-fx-cursor: hand;
+}
+.menu:hover{
+	-fx-cursor: hand;
 }
