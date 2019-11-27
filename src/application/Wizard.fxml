@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorWizard">
+   <children>
+      <AnchorPane fx:id="pane3" layoutX="20.0" layoutY="20.0" style="-fx-background-color: lightgreen;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="172.0" layoutY="73.0" prefHeight="90.0" prefWidth="256.0" text="Slide 3 Title">
+               <font>
+                  <Font name="Quicksand Regular" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="199.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" text="Slide 3">
+               <font>
+                  <Font name="Quicksand Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="199.0" layoutY="146.0" prefHeight="90.0" prefWidth="200.0" text="i,imnuty,i7mun&#10;,iom7unt,7ikm&#10;,imun67imunj&#10;,imuim7on6ujbt&#10;i7oku67,imku6nj&#10;kimunj">
+               <font>
+                  <Font name="Quicksand Regular" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane2" layoutX="10.0" layoutY="10.0" style="-fx-background-color: yellow;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="172.0" layoutY="73.0" prefHeight="90.0" prefWidth="256.0" text="Slide 2 Title">
+               <font>
+                  <Font name="Quicksand Regular" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="199.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" text="Slide 2">
+               <font>
+                  <Font name="Quicksand Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="199.0" layoutY="146.0" prefHeight="90.0" prefWidth="200.0" text="i,imnuty,i7mun&#10;,iom7unt,7ikm&#10;,imun67imunj&#10;,imuim7on6ujbt&#10;i7oku67,imku6nj&#10;kimunj">
+               <font>
+                  <Font name="Quicksand Regular" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane1" style="-fx-background-color: aqua;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="172.0" layoutY="73.0" prefHeight="90.0" prefWidth="256.0" text="Slide 1 Title">
+               <font>
+                  <Font name="Quicksand Regular" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="199.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" text="Slide 1">
+               <font>
+                  <Font name="Quicksand Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="199.0" layoutY="146.0" prefHeight="90.0" prefWidth="200.0" text="i,imnuty,i7mun&#10;,iom7unt,7ikm&#10;,imun67imunj&#10;,imuim7on6ujbt&#10;i7oku67,imku6nj&#10;kimunj">
+               <font>
+                  <Font name="Quicksand Regular" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblIndex" alignment="CENTER" layoutX="200.0" layoutY="514.0" prefHeight="21.0" prefWidth="200.0">
+               <font>
+                  <Font name="Quicksand Regular" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnBefore" layoutX="83.0" layoutY="505.0" prefHeight="35.0" prefWidth="35.0" styleClass="btnNextBefore" stylesheets="@application.css" text="&lt;" />
+            <JFXButton fx:id="btnNext" layoutX="454.0" layoutY="505.0" prefHeight="35.0" prefWidth="35.0" styleClass="btnNextBefore" stylesheets="@application.css" text="&gt;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

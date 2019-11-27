@@ -15,6 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 public class Controlador {
@@ -52,23 +53,6 @@ public class Controlador {
 	@FXML
 	public void cerrar() {
 		System.exit(0);
-	}
-
-	/**
-	 * Crea la ventana de login
-	 */
-	private void crearLogin() {
-		Stage primaryStage = new Stage();
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
-			AnchorPane pane = (AnchorPane) loader.load();
-			Scene scene = new Scene(pane, 1150, 686);
-			primaryStage.setScene(scene);
-			primaryStage.setResizable(false);
-			primaryStage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	public void initialize() {
@@ -121,7 +105,7 @@ public class Controlador {
 							ft.play();
 							ft.setOnFinished(event5 -> {
 								Stage sala = (Stage) lblNombre.getScene().getWindow();
-								crearLogin();
+								crearWizard();
 								sala.close();
 							});
 						});
@@ -129,6 +113,21 @@ public class Controlador {
 				});
 			});
 		});
+	}
+
+	private void crearWizard() {
+		Stage primaryStage = new Stage();
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Wizard.fxml"));
+			AnchorPane pane = (AnchorPane) loader.load();
+			Scene scene = new Scene(pane, 600, 600);
+			primaryStage.initStyle(StageStyle.UNDECORATED);
+			primaryStage.setScene(scene);
+			primaryStage.setResizable(false);
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**

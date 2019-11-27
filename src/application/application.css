@@ -172,3 +172,7 @@
 .menu:hover{
 	-fx-cursor: hand;
 }
+.btnNextBefore{
+	-fx-background-radius: 100px;
+	-fx-background-color: white;
+}
