@@ -83,8 +83,8 @@
 .seccion1:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
-	-fx-translate-x: -5;
-	-fx-translate-y: -5;
+	-fx-translate-x: -5.0;
+	-fx-translate-y: -5.0;
 	-fx-cursor: hand;
 }
 .seccion2{
@@ -94,7 +94,7 @@
 .seccion2:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
-	-fx-translate-y: -5;
+	-fx-translate-y: -5.0;
 	-fx-cursor: hand;
 }
 .seccion3{
@@ -104,8 +104,8 @@
 .seccion3:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
-	-fx-translate-x: 5;
-	-fx-translate-y: -5;
+	-fx-translate-x: 5.0;
+	-fx-translate-y: -5.0;
 	-fx-cursor: hand;
 }
 .seccion4{
@@ -115,7 +115,7 @@
 .seccion4:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
-	-fx-translate-x: -5;
+	-fx-translate-x: -5.0;
 	-fx-cursor: hand;
 }
 .seccion5{
@@ -134,7 +134,7 @@
 .seccion6:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
-	-fx-translate-x: 5;
+	-fx-translate-x: 5.0;
 	-fx-cursor: hand;
 }
 .seccion7{
@@ -144,8 +144,8 @@
 .seccion7:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
-	-fx-translate-x: -5;
-	-fx-translate-y: 5;
+	-fx-translate-x: -5.0;
+	-fx-translate-y: 5.0;
 	-fx-cursor: hand;
 }
 .seccion8{
@@ -155,7 +155,7 @@
 .seccion8:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
-	-fx-translate-y: 5;
+	-fx-translate-y: 5.0;
 	-fx-cursor: hand;
 }
 .seccion9{
@@ -165,14 +165,30 @@
 .seccion9:hover{
 	-fx-background-color: lime;
 	-fx-text-fill: green;
-	-fx-translate-x: 5;
-	-fx-translate-y: 5;
+	-fx-translate-x: 5.0;
+	-fx-translate-y: 5.0;
 	-fx-cursor: hand;
 }
 .menu:hover{
 	-fx-cursor: hand;
 }
-.btnNextBefore{
-	-fx-background-radius: 100px;
-	-fx-background-color: white;
+
+/*
+ * #------------------------------Wizard------------------------------
+ */ 
+
+.imgEncuentra{
+	-fx-background-image: url("../img/magnifying-glass.png");
+	-fx-background-size:100.0%;
+	-fx-background-repeat: no-repeat;
+}
+.imgScann{
+	-fx-background-image: url("../img/face-scanner.png");
+	-fx-background-size:100.0%;
+	-fx-background-repeat: no-repeat;
+}
+.imgRead{
+	-fx-background-image: url("../img/book.png");
+	-fx-background-size:100.0%;
+	-fx-background-repeat: no-repeat;
 }

@@ -7,7 +7,6 @@ import javafx.stage.StageStyle;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
-
 /**
  * 
  * @author Ricardo Bordería Pi

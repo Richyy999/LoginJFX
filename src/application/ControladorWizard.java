@@ -1,7 +1,9 @@
 package application;
 
+
 import com.jfoenix.controls.JFXButton;
 
+import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,6 +30,7 @@ public class ControladorWizard {
 	public void initialize() {
 		index = 1;
 		lblIndex.setText("1/3");
+		btnBefore.setVisible(false);
 		cargarListeners();
 	}
 
@@ -46,13 +49,25 @@ public class ControladorWizard {
 			translation(0.5, pane1, 600);
 			index--;
 			lblIndex.setText("1/3");
+			btnBefore.setVisible(false);
 			break;
 		case 3:
 			translation(0.5, pane2, 600);
 			index--;
 			lblIndex.setText("2/3");
+			reducirTamaño();
 			break;
 		}
+	}
+
+	private void reducirTamaño() {
+		ScaleTransition st = new ScaleTransition(Duration.seconds(0.3), btnNext);
+		st.setFromX(0.6);
+		st.setByX(0.35);
+		st.play();
+		st.setOnFinished(event -> {
+			btnNext.setText(">");
+		});
 	}
 
 	private void siguiente() {
@@ -61,11 +76,13 @@ public class ControladorWizard {
 			translation(0.5, pane1, -600);
 			index++;
 			lblIndex.setText("2/3");
+			btnBefore.setVisible(true);
 			break;
 		case 2:
 			translation(0.5, pane2, -600);
 			index++;
 			lblIndex.setText("3/3");
+			aumentarTamaño();
 			break;
 		case 3:
 			Stage sala = (Stage) lblIndex.getScene().getWindow();
@@ -73,6 +90,16 @@ public class ControladorWizard {
 			sala.close();
 			break;
 		}
+	}
+
+	private void aumentarTamaño() {
+		ScaleTransition st = new ScaleTransition(Duration.seconds(0.3), btnNext);
+		st.setFromX(0.35);
+		st.setByX(0.6);
+		st.play();
+		st.setOnFinished(event -> {
+			btnNext.setText("Log In");
+		});
 	}
 
 	private void translation(double duration, Node node, double ejeY) {
