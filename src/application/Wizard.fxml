@@ -71,8 +71,8 @@
                   <Font name="Quicksand Regular" size="16.0" />
                </font>
             </Label>
-            <JFXButton fx:id="btnBefore" focusTraversable="false" layoutX="182.0" layoutY="505.0" prefHeight="35.0" prefWidth="35.0" styleClass="btnLogin" stylesheets="@application.css" text="&lt;" />
-            <JFXButton fx:id="btnNext" focusTraversable="false" layoutX="384.0" layoutY="505.0" styleClass="btnLogin" stylesheets="@application.css" text="&gt;" />
+            <JFXButton fx:id="btnBefore" focusTraversable="false" layoutX="182.0" layoutY="505.0" onAction="#anterior" prefHeight="35.0" prefWidth="35.0" styleClass="btnLogin" stylesheets="@application.css" text="&lt;" />
+            <JFXButton fx:id="btnNext" focusTraversable="false" layoutX="384.0" layoutY="505.0" onAction="#siguiente" styleClass="btnLogin" stylesheets="@application.css" text="&gt;" />
          </children>
       </AnchorPane>
    </children>

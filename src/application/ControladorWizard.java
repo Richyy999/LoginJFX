@@ -1,6 +1,5 @@
 package application;
 
-
 import com.jfoenix.controls.JFXButton;
 
 import javafx.animation.ScaleTransition;
@@ -31,18 +30,29 @@ public class ControladorWizard {
 		index = 1;
 		lblIndex.setText("1/3");
 		btnBefore.setVisible(false);
-		cargarListeners();
+//		cargarListeners();
 	}
 
-	private void cargarListeners() {
-		btnNext.setOnMouseClicked(event -> {
-			siguiente();
-		});
-		btnBefore.setOnMouseClicked(event -> {
-			anterior();
+//	private void cargarListeners() {
+//		btnNext.setOnMouseClicked(event -> {
+//			siguiente();
+//		});
+//		btnBefore.setOnMouseClicked(event -> {
+//			anterior();
+//		});
+//	}
+
+	private void reducirTamaño() {
+		ScaleTransition st = new ScaleTransition(Duration.seconds(0.3), btnNext);
+		st.setFromX(0.6);
+		st.setByX(0.35);
+		st.play();
+		st.setOnFinished(event -> {
+			btnNext.setText(">");
 		});
 	}
 
+	@FXML
 	private void anterior() {
 		switch (index) {
 		case 2:
@@ -60,16 +70,7 @@ public class ControladorWizard {
 		}
 	}
 
-	private void reducirTamaño() {
-		ScaleTransition st = new ScaleTransition(Duration.seconds(0.3), btnNext);
-		st.setFromX(0.6);
-		st.setByX(0.35);
-		st.play();
-		st.setOnFinished(event -> {
-			btnNext.setText(">");
-		});
-	}
-
+	@FXML
 	private void siguiente() {
 		switch (index) {
 		case 1:
