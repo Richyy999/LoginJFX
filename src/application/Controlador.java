@@ -54,6 +54,9 @@ public class Controlador {
 		System.exit(0);
 	}
 
+	/**
+	 * Crea la ventana de login
+	 */
 	private void crearLogin() {
 		Stage primaryStage = new Stage();
 		try {
@@ -73,6 +76,9 @@ public class Controlador {
 		backgroundAnimation();
 	}
 
+	/**
+	 * Transiciones del splash
+	 */
 	private void transiciones() {
 		TranslateTransition tran = new TranslateTransition(Duration.seconds(0.1), img);
 		tran.setByY(700);
@@ -125,6 +131,9 @@ public class Controlador {
 		});
 	}
 
+	/**
+	 * Animacion del background del login
+	 */
 	private void backgroundAnimation() {
 		FadeTransition fadeTransition = new FadeTransition(Duration.seconds(5), panel4);
 		fadeTransition.setFromValue(1);
@@ -178,6 +187,9 @@ public class Controlador {
 		});
 	}
 
+	/**
+	 * Comprueba el login
+	 */
 	public void logIn() {
 		if (txtNombre.getText().equals("Ricardo") && txtPwd.getText().equals("1234")) {
 			Stage escena = (Stage) txtNombre.getScene().getWindow();
@@ -189,6 +201,9 @@ public class Controlador {
 		}
 	}
 
+	/**
+	 * Crea la HomePage
+	 */
 	private void crearHomepage() {
 		Stage primaryStage = new Stage();
 		try {

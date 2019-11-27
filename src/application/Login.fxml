@@ -30,8 +30,8 @@
                      </VBox.margin>
                   </ImageView>
                   <JFXTextField fx:id="txtNombre" labelFloat="true" promptText="Username" styleClass="campos" stylesheets="@application.css" />
-                  <JFXPasswordField fx:id="txtPwd" labelFloat="true" promptText="Password" styleClass="campos" stylesheets="@application.css" />
-                  <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#logIn" prefHeight="36.0" prefWidth="213.0" styleClass="botones" stylesheets="@application.css" text="Get Started">
+                  <JFXPasswordField fx:id="txtPwd" labelFloat="true" onAction="#logIn" promptText="Password" styleClass="campos" stylesheets="@application.css" />
+                  <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#logIn" prefHeight="36.0" prefWidth="213.0" styleClass="btnLogin" stylesheets="@application.css" text="Get Started">
                      <font>
                         <Font name="Quicksand Regular" size="14.0" />
                      </font>

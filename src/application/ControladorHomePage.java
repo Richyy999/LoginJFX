@@ -34,11 +34,16 @@ public class ControladorHomePage {
 		animacionHome();
 		esconderMenu();
 
-		opacityPane.setVisible(false);
 		opacityPane.setOnMouseClicked(event -> {
 			esconderMenu();
 		});
+		cargarListeners();
+	}
 
+	/**
+	 * Carga los listeners
+	 */
+	private void cargarListeners() {
 		img.setOnMouseClicked(event -> {
 			if (mostrado)
 				esconderMenu();
@@ -47,8 +52,15 @@ public class ControladorHomePage {
 		});
 	}
 
+	/**
+	 * Esconde el menú
+	 * 
+	 * @see ControladorHomePage#initialize()
+	 * @see ControladorHomePage#cargarListeners()
+	 */
 	private void esconderMenu() {
 		if (mostrado) {
+			mostrado = false;
 			FadeTransition ft = new FadeTransition(Duration.seconds(0.5), opacityPane);
 			ft.setFromValue(0.3);
 			ft.setByValue(0);
@@ -57,25 +69,34 @@ public class ControladorHomePage {
 			TranslateTransition tt = new TranslateTransition(Duration.seconds(0.5), menLateral);
 			tt.setByX(-200);
 			tt.play();
-			mostrado = false;
 		}
 	}
 
+	/**
+	 * Muestra el menu
+	 * 
+	 * @see ControladorHomePage#cargarListeners()
+	 */
 	private void mostrarMenu() {
 		if (!mostrado) {
+			mostrado = true;
+			TranslateTransition tt = new TranslateTransition(Duration.seconds(0.5), menLateral);
+			tt.setByX(200);
+			tt.play();
+
 			opacityPane.setVisible(true);
 			FadeTransition ft = new FadeTransition(Duration.seconds(0.5), opacityPane);
 			ft.setFromValue(0);
 			ft.setByValue(0.3);
 			ft.play();
-
-			TranslateTransition tt = new TranslateTransition(Duration.seconds(0.5), menLateral);
-			tt.setByX(200);
-			tt.play();
-			mostrado = true;
 		}
 	}
 
+	/**
+	 * Crea la animación del wallpaper de la ventana
+	 * 
+	 * @see ControladorHomePage#initialize()
+	 */
 	private void animacionHome() {
 		FadeTransition fadeTransition = new FadeTransition(Duration.seconds(5), aPan4);
 		fadeTransition.setFromValue(1);
