@@ -8,35 +8,45 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
+/**
+ * 
+ * @author Ricardo Bordería Pi
+ *
+ */
 public class ControladorHomePage {
 
+	/**
+	 * paneles
+	 */
 	@FXML
-	private AnchorPane aPan1;
-	@FXML
-	private AnchorPane aPan2;
-	@FXML
-	private AnchorPane aPan3;
-	@FXML
-	private AnchorPane aPan4;
-	@FXML
-	private AnchorPane opacityPane;
-
+	private AnchorPane aPan1, aPan2, aPan3, aPan4, opacityPane;
+	/**
+	 * Menú lateral
+	 */
 	@FXML
 	private VBox menLateral;
 
+	/**
+	 * Imagen menú
+	 */
 	@FXML
 	private ImageView img;
 
+	/**
+	 * Si el menú lateral está ostrado
+	 */
 	private boolean mostrado;
 
+	/**
+	 * Indica que el menú esta mostrado para después esconderlo, carga las
+	 * animaciones del fondo y carga los listeners
+	 * 
+	 * @see ControladorHomePage#cargarListeners()
+	 */
 	public void initialize() {
 		mostrado = true;
 		animacionHome();
 		esconderMenu();
-
-		opacityPane.setOnMouseClicked(event -> {
-			esconderMenu();
-		});
 		cargarListeners();
 	}
 
@@ -49,6 +59,10 @@ public class ControladorHomePage {
 				esconderMenu();
 			else
 				mostrarMenu();
+		});
+
+		opacityPane.setOnMouseClicked(event -> {
+			esconderMenu();
 		});
 	}
 
@@ -73,7 +87,7 @@ public class ControladorHomePage {
 	}
 
 	/**
-	 * Muestra el menu
+	 * Muestra el menú
 	 * 
 	 * @see ControladorHomePage#cargarListeners()
 	 */

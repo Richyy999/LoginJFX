@@ -10,7 +10,6 @@ import javafx.scene.layout.AnchorPane;
 /**
  * 
  * @author Ricardo Bordería Pi
- * @see ControladorHomePage
  *
  */
 public class Main extends Application {

@@ -18,43 +18,67 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
+/**
+ * 
+ * @author Ricardo Bordería Pi
+ *
+ */
 public class Controlador {
+	/**
+	 * Paneles de Splash
+	 */
+	@FXML
+	private AnchorPane cuadroCentro, root;
 
+	/**
+	 * Paneles del Login
+	 */
 	@FXML
-	private AnchorPane cuadroCentro;
+	private Pane panel1, panel2, panel3, panel4;
+	/**
+	 * label del login
+	 */
 	@FXML
-	private AnchorPane root;
-
-	@FXML
-	private Pane panel1;
-	@FXML
-	private Pane panel2;
-	@FXML
-	private Pane panel3;
-	@FXML
-	private Pane panel4;
-
-	@FXML
-	private Label lblNombre;
-	@FXML
-	private Label lblSlogan;
-
+	private Label lblNombre, lblSlogan;
+	/**
+	 * imagen del Splash
+	 */
 	@FXML
 	private ImageView img;
 
+	/**
+	 * botón de login
+	 */
 	@FXML
 	private Button btnLogin;
 
+	/**
+	 * campo que recoge el username del login
+	 */
 	@FXML
 	private JFXTextField txtNombre;
+
+	/**
+	 * campo que recoge la contraseña del login
+	 */
 	@FXML
 	private JFXPasswordField txtPwd;
 
+	/**
+	 * Cierra la Aplicación
+	 */
 	@FXML
 	public void cerrar() {
 		System.exit(0);
 	}
 
+	/**
+	 * Inicia las transiciones
+	 * 
+	 * @see Controlador#transiciones()
+	 * @see Controlador#backgroundAnimation()
+	 * 
+	 */
 	public void initialize() {
 		transiciones();
 		backgroundAnimation();
@@ -115,6 +139,9 @@ public class Controlador {
 		});
 	}
 
+	/**
+	 * Crea la ventana del wizard
+	 */
 	private void crearWizard() {
 		Stage primaryStage = new Stage();
 		try {

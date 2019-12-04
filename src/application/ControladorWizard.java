@@ -13,19 +13,39 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+/**
+ * 
+ * @author Ricardo Bordería Pi
+ *
+ */
 public class ControladorWizard {
 
+	/**
+	 * Botones para avanzar el las indicaciones del wizard
+	 */
 	@FXML
 	private JFXButton btnNext, btnBefore;
 
+	/**
+	 * Label con el índice del wizard
+	 */
 	@FXML
 	private Label lblIndex;
 
+	/**
+	 * Paneles para indicar en que paso está el usuario
+	 */
 	@FXML
 	private AnchorPane pane1, pane2, pane3;
 
+	/**
+	 * Índice del panel actual
+	 */
 	private int index;
 
+	/**
+	 * Inicializa la vista, el índice y hace invisible el botón de volver
+	 */
 	public void initialize() {
 		index = 1;
 		lblIndex.setText("1/3");
@@ -42,6 +62,9 @@ public class ControladorWizard {
 //		});
 //	}
 
+	/**
+	 * Reduce el tamaño del botón de Log In
+	 */
 	private void reducirTamaño() {
 		ScaleTransition st = new ScaleTransition(Duration.seconds(0.3), btnNext);
 		st.setFromX(0.6);
@@ -52,6 +75,9 @@ public class ControladorWizard {
 		});
 	}
 
+	/**
+	 * Cambia al paso anterior
+	 */
 	@FXML
 	private void anterior() {
 		switch (index) {
@@ -70,6 +96,9 @@ public class ControladorWizard {
 		}
 	}
 
+	/**
+	 * Cambia al paso posterior
+	 */
 	@FXML
 	private void siguiente() {
 		switch (index) {
@@ -93,6 +122,10 @@ public class ControladorWizard {
 		}
 	}
 
+	/**
+	 * Aumenta el tamaño del botón de avanzar y lo aumenta para que se lea el "Log
+	 * In"
+	 */
 	private void aumentarTamaño() {
 		ScaleTransition st = new ScaleTransition(Duration.seconds(0.3), btnNext);
 		st.setFromX(0.35);
@@ -103,6 +136,15 @@ public class ControladorWizard {
 		});
 	}
 
+	/**
+	 * Crea las transiciones del wizard
+	 * 
+	 * @param duration lo que dura la animación
+	 * @param node     elemento de la vista al cual se aplica la animación
+	 * @param ejeY     distancia en el eje y que se va a desplazarel nodo
+	 * @see ControladorWizard#anterior()
+	 * @see ControladorWizard#siguiente()
+	 */
 	private void translation(double duration, Node node, double ejeY) {
 		TranslateTransition tt = new TranslateTransition(Duration.seconds(duration), node);
 		tt.setByY(ejeY);
